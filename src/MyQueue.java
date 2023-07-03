@@ -5,17 +5,17 @@ private int front;
 private int last;
 
     public MyQueue() {
-        elementData = new Object[10];
-        front = 0;
-        last = -1;
-        size = 0;
+        this.elementData = new Object[10];
+        this.front = 0;
+        this.last = -1;
+        this.size = 0;
     }
-    public void add(E element){
+    public void add(E value){
         if (size == elementData.length){
             resize();
         }
         last = (last +1) % elementData.length;
-        elementData[last] = element;
+        elementData[last] = value;
         size++;
     }
     public void clear(){
@@ -29,13 +29,13 @@ private int last;
     }
     public E peek(){
         if(size == 0){
-            return (E) "NoSuchElementException()";
+            return (E) "Не Вірно Вказаний Елемент";
         }
         return(E) elementData[front];
     }
     public E poll(){
         if(size == 0) {
-            return (E) "NoSuchElementException()";
+            return (E) "Не Вірно Вказаний Елемент";
         }
         E element = (E) elementData[front];
         elementData[front] = null;

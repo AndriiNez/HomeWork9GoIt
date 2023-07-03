@@ -4,8 +4,8 @@ public class MyLinkedList<E> {
     private Node<E> lostElement;
     private int size = 0;
 
-    public void add(E element){
-        Node<E> newNode = new Node<>(element);
+    public void add(E value){
+        Node<E> newNode = new Node<>(value);
         if(size == 0){
             firstElement = newNode;
             lostElement = newNode;

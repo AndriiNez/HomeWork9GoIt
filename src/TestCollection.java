@@ -47,18 +47,32 @@ public class TestCollection {
 //        linkedList.clear();
 //        System.out.println("list after clear = " + linkedList.size());
 
-// Створюємо MyQueue
-        MyQueue<String> queue = new MyQueue<>();
-        queue.add("one");
-        queue.add("twu");
-        queue.add("tree");
+        // Створюємо MyQueue
+//        MyQueue<Integer> queue = new MyQueue<>();
+//        for (int i = 1; i <= 200000 ; i++){
+//            queue.add(i);
+//        }
+//
+//        System.out.println("Size: " + queue.size());
+//        System.out.println("Peek: " + queue.peek());
+//        System.out.println("Poll: " + queue.poll());
+//        System.out.println("Peek after Poll: " + queue.peek());
+//        queue.clear();
+//        System.out.println("size after clear = " + queue.size());
 
-        System.out.println("Size: " + queue.size());
-        System.out.println("Peek: " + queue.peek());
-        System.out.println("Poll: " + queue.poll());
-        System.out.println("Peek after Poll: " + queue.peek());
-        queue.clear();
-        System.out.println("size after clear = " + queue.size());
+
+        // Створюємо MyQueue
+//        MyStack<Integer> myStack = new MyStack<>();
+//        for (int i = 1; i <= 200000 ; i++) {
+//            myStack.push(i);
+//        }
+//        System.out.println("Size: " + myStack.size());
+//        System.out.println("Peek: " + myStack.peek());
+//        System.out.println("Pop: " + myStack.pop());
+//        System.out.println("Pop: " + myStack.pop());
+//
+//        myStack.clear();
+//        System.out.println("Size after clear " + myStack.size());
     }
 
 }

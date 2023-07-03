@@ -1,2 +1,5 @@
-public class MyHashMap {
+import java.util.HashMap;
+
+public class MyHashMap<E> {
+
 }
