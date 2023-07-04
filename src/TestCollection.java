@@ -1,15 +1,12 @@
 public class TestCollection {
     public static void main(String[] args) {
-//         Створюємо MyArrayList
+        System.out.println(" Створюємо MyArrayList ");
 
         MyArrayList<Integer> list = new MyArrayList<>();
         for (int i = 1; i <= 200000; i++) {
             list.add(i);
-
         }
-
-
-            System.out.println("list2  = " + list.get(2));
+        System.out.println("list2  = " + list.get(2));
 
 
 
@@ -24,15 +21,13 @@ public class TestCollection {
         list.clear();
         System.out.println("list after clear = " + list.size());
 
-//         Створюємо MyLinkedList
+        System.out.println(" Створюємо MyLinkedList ");
 
         MyLinkedList<Integer> linkedList = new MyLinkedList<>();
         for (int i = 0; i <= 200000; i++) {
             linkedList.add(i);
         }
-
-
-            System.out.println("list 2 = " + linkedList.get(2));
+        System.out.println("list 2 = " + linkedList.get(2));
 
 
 
@@ -47,7 +42,7 @@ public class TestCollection {
         linkedList.clear();
         System.out.println("list after clear = " + linkedList.size());
 
-//         Створюємо MyQueue
+        System.out.println(" Створюємо MyQueue ");
         MyQueue<Integer> queue = new MyQueue<>();
         for (int i = 1; i <= 200000 ; i++){
             queue.add(i);
@@ -60,8 +55,8 @@ public class TestCollection {
         queue.clear();
         System.out.println("size after clear = " + queue.size());
 
+        System.out.println(" Створюємо MyQueue. ");
 
-//         Створюємо MyQueue
         MyStack<Integer> myStack = new MyStack<>();
         for (int i = 1; i <= 200000 ; i++) {
             myStack.push(i);
@@ -73,7 +68,7 @@ public class TestCollection {
 
         myStack.clear();
         System.out.println("Size after clear " + myStack.size());
-//          Створюємо MyMyHashMap
+        System.out.println(" Створюємо MyHashMap " );
         MyHashMap<Integer, Integer> myHashMap = new MyHashMap<>();
         for (int i = 1; i <= 200000 ; i++) {
             myHashMap.put(i,i);
@@ -85,7 +80,6 @@ public class TestCollection {
         System.out.println("myHashMap.size() = " + myHashMap.size());
         myHashMap.clear();
         System.out.println("size after clear = " + myHashMap.size());
-
     }
 
 }
