@@ -10,7 +10,7 @@ private int last;
         this.last = -1;
         this.size = 0;
     }
-    public void add(E value){
+    public void add(Object value){
         if (size == elementData.length){
             resize();
         }

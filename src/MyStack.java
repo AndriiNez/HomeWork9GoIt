@@ -10,7 +10,7 @@ private int lElem;
         this.size = 0;
         this.lElem = -1;
     }
-    public void push(E value ){
+    public void push(Object value ){
       if (size == elementData.length){
         resize();
       }

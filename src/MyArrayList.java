@@ -9,7 +9,7 @@ public class MyArrayList<E> {
         this.elementData = new Object[DEFAULT_CAPACITY];
         this.size = 0;
     }
-    public <E> void add(E value){
+    public <E> void add(Object value){
         sizeCapacity();
         elementData[size++] = value;
     }
