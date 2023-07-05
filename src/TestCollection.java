@@ -28,12 +28,7 @@ public class TestCollection {
             linkedList.add(i);
         }
         System.out.println("list 2 = " + linkedList.get(2));
-
-
-
         System.out.println("list size  = " + linkedList.size());
-
-
         System.out.println("list get 4 = " + linkedList.get(4));
 
         linkedList.remove(4);
@@ -55,7 +50,7 @@ public class TestCollection {
         queue.clear();
         System.out.println("size after clear = " + queue.size());
 
-        System.out.println(" Створюємо MyQueue. ");
+        System.out.println(" Створюємо MyStack ");
 
         MyStack<Integer> myStack = new MyStack<>();
         for (int i = 1; i <= 200000 ; i++) {

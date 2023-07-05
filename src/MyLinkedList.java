@@ -41,14 +41,6 @@ public class MyLinkedList<E> {
         size--;
     }
     public void clear(){
-        Node<E> currentNode = firstElement;
-        if(currentNode != null){
-            Node<E> nextNode = currentNode.nextElement;
-            currentNode.element = null;
-            currentNode.nextElement = null;
-            currentNode.prevElement = null;
-            currentNode = nextNode;
-        }
         firstElement = null;
         lostElement = null;
         size = 0;
