@@ -9,35 +9,41 @@ public class MyArrayList<E> {
         this.elementData = new Object[DEFAULT_CAPACITY];
         this.size = 0;
     }
-    public void add(E value){
+
+    public void add(E value) {
         sizeCapacity();
         elementData[size++] = value;
     }
-    public void remove(int index){
-        if(index < 0 || index >= size ){
+
+    public void remove(int index) {
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        for (int i = index; i < size - 1 ; i++) {
+        for (int i = index; i < size - 1; i++) {
             elementData[i] = elementData[i + 1];
         }
         elementData[size - 1] = null;
         size--;
     }
-    public void clear(){
+
+    public void clear() {
         elementData = new Object[DEFAULT_CAPACITY];
         size = 0;
     }
-    public int size(){
+
+    public int size() {
         return size;
     }
+
     public E get(int index) {
-        if(index < 0 || index >= size ){
+        if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
         return (E) elementData[index];
     }
-    private void sizeCapacity(){
-        if(size == elementData.length){
+
+    private void sizeCapacity() {
+        if (size == elementData.length) {
             int newCapacity = elementData.length * 2;
             elementData = Arrays.copyOf(elementData, newCapacity);
         }

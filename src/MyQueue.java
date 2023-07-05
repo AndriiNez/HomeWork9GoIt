@@ -1,8 +1,8 @@
 public class MyQueue<E> {
-private Object[] elementData;
-private int size;
-private int front;
-private int last;
+    private Object[] elementData;
+    private int size;
+    private int front;
+    private int last;
 
     public MyQueue() {
         this.elementData = new Object[10];
@@ -10,31 +10,36 @@ private int last;
         this.last = -1;
         this.size = 0;
     }
-    public void add(E value){
-        if (size == elementData.length){
+
+    public void add(E value) {
+        if (size == elementData.length) {
             resize();
         }
-        last = (last +1) % elementData.length;
+        last = (last + 1) % elementData.length;
         elementData[last] = value;
         size++;
     }
-    public void clear(){
+
+    public void clear() {
         elementData = new Object[10];
         front = 0;
         last = -1;
         size = 0;
     }
-    public int size(){
+
+    public int size() {
         return size;
     }
-    public E peek(){
-        if(size == 0){
+
+    public E peek() {
+        if (size == 0) {
             return (E) "Не Вірно Вказаний Елемент";
         }
-        return(E) elementData[front];
+        return (E) elementData[front];
     }
-    public E poll(){
-        if(size == 0) {
+
+    public E poll() {
+        if (size == 0) {
             return (E) "Не Вірно Вказаний Елемент";
         }
         E element = (E) elementData[front];
@@ -44,7 +49,7 @@ private int last;
         return element;
     }
 
-    private void resize(){
+    private void resize() {
         Object[] newElementData = new Object[elementData.length * 2];
         for (int i = 0; i < size; i++) {
             newElementData[i] = elementData[(front + i) % elementData.length];

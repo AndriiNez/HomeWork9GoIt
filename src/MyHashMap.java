@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class MyHashMap<K,V> {
+public class MyHashMap<K, V> {
     private static final int DEFAULT_CAPACITY = 16;
     private static final float LOAD_FACTOR = 0.75F;
 
@@ -12,6 +12,7 @@ public class MyHashMap<K,V> {
         this.element = new Node[DEFAULT_CAPACITY];
         this.size = 0;
     }
+
     public void put(K key, V value) {
         int index = gerIndex(key);
         Node<K, V> newNode = new Node<>(key, value);
@@ -19,12 +20,12 @@ public class MyHashMap<K,V> {
             element[index] = newNode;
         } else {
             Node<K, V> currentNode = element[index];
-            while (currentNode != null){
-                if( Objects.equals(currentNode.key, key)){
+            while (currentNode != null) {
+                if (Objects.equals(currentNode.key, key)) {
                     currentNode.value = value;
                     return;
                 }
-                if(currentNode.next == null){
+                if (currentNode.next == null) {
                     currentNode.next = newNode;
                     break;
                 }
@@ -34,15 +35,16 @@ public class MyHashMap<K,V> {
         size++;
         resize();
     }
-    public void remove(K key){
+
+    public void remove(K key) {
         int index = gerIndex(key);
         Node<K, V> currentNode = element[index];
         Node<K, V> privNode = null;
         while (currentNode != null) {
-            if( Objects.equals(currentNode.key, key)){
-                if(privNode == null){
+            if (Objects.equals(currentNode.key, key)) {
+                if (privNode == null) {
                     element[index] = currentNode.next;
-                }else {
+                } else {
                     privNode.next = currentNode.next;
                 }
                 size--;
@@ -52,23 +54,26 @@ public class MyHashMap<K,V> {
             currentNode = currentNode.next;
         }
     }
-    public void clear(){
+
+    public void clear() {
         element = new Node[DEFAULT_CAPACITY];
         size = 0;
     }
+
     public int size() {
         return size;
     }
-    public V get(K key){
+
+    public V get(K key) {
         int index = gerIndex(key);
         Node<K, V> currentNode = element[index];
         while (currentNode != null) {
-            if( Objects.equals(currentNode.key, key)) {
+            if (Objects.equals(currentNode.key, key)) {
                 return currentNode.value;
             }
             currentNode = currentNode.next;
         }
-            return null;
+        return null;
     }
 
     private int gerIndex(K key) {
@@ -81,7 +86,7 @@ public class MyHashMap<K,V> {
             Node<K, V>[] newElement = new Node[newCapacity];
 
             for (Node<K, V> node : element) {
-                while ( node != null) {
+                while (node != null) {
                     int newIndex = Objects.hashCode(node.key) % newCapacity;
                     if (newElement[newIndex] != null) {
                         newElement[newIndex] = new Node<>(node.key, node.value);
@@ -97,17 +102,17 @@ public class MyHashMap<K,V> {
         }
     }
 
-        private static class Node<K, V> {
-            private final K key;
-            private V value;
-            private Node<K, V> next;
+    private static class Node<K, V> {
+        private final K key;
+        private V value;
+        private Node<K, V> next;
 
-            private Node(K key, V value) {
-                this.key = key;
-                this.value = value;
-                this.next = null;
-            }
+        private Node(K key, V value) {
+            this.key = key;
+            this.value = value;
+            this.next = null;
         }
+    }
 
 }
 

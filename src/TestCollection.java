@@ -9,7 +9,6 @@ public class TestCollection {
         System.out.println("list2  = " + list.get(2));
 
 
-
         System.out.println("list size  = " + list.size());
 
 
@@ -39,7 +38,7 @@ public class TestCollection {
 
         System.out.println(" Створюємо MyQueue ");
         MyQueue<Integer> queue = new MyQueue<>();
-        for (int i = 1; i <= 200000 ; i++){
+        for (int i = 1; i <= 200000; i++) {
             queue.add(i);
         }
 
@@ -53,7 +52,7 @@ public class TestCollection {
         System.out.println(" Створюємо MyStack ");
 
         MyStack<Integer> myStack = new MyStack<>();
-        for (int i = 1; i <= 200000 ; i++) {
+        for (int i = 1; i <= 200000; i++) {
             myStack.push(i);
         }
         System.out.println("Size: " + myStack.size());
@@ -63,10 +62,10 @@ public class TestCollection {
 
         myStack.clear();
         System.out.println("Size after clear " + myStack.size());
-        System.out.println(" Створюємо MyHashMap " );
+        System.out.println(" Створюємо MyHashMap ");
         MyHashMap<Integer, Integer> myHashMap = new MyHashMap<>();
-        for (int i = 1; i <= 200000 ; i++) {
-            myHashMap.put(i,i);
+        for (int i = 1; i <= 200000; i++) {
+            myHashMap.put(i, i);
 
         }
         System.out.println("get element 99 = " + myHashMap.get(99));
